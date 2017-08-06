@@ -1,0 +1,5 @@
+@media print {
+    .main-nav, .usermenu, .feedback, .search-filter, .datatables-filter, .btn, .backtotop {
+        display: none !important;
+    }
+}

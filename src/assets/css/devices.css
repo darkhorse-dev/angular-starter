@@ -1,0 +1,239 @@
+/**
+* General
+*/
+@media screen and (max-width: 1255px) {
+    .maincontent {
+        min-width: 480px;
+        background: #CCC;
+        padding-bottom: 40px;
+        margin-top: -10px;
+        z-index: 8888;
+    }
+
+    .wrapped {
+        width: 99%;
+        min-width: 480px;
+        margin: 0 auto;
+    }
+
+    .inform-message {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .inform div:first-child .close {
+        right: 0;
+        width: 65px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    body, thead th {
+        font-size: 12px;
+    }
+}
+
+/**
+* Visit Overview
+*/
+@media screen and (max-width: 1255px) {
+    .visitoverview  .arrival, .visitoverview .departure, .visitoverview .status,
+    .visitoverview .tasks, .visitoverview .warning {
+        width: auto;
+    }
+
+    .sorting {
+        padding-left: 15px;
+    }
+
+    .visitoverview .crn {
+        width: 95px;
+    }
+
+}
+
+@media screen and (max-width: 1023px) {
+    body, thead th {
+        font-size: 12px;
+    }
+
+    .visitoverview .portofcall, .visitoverview .departure {
+        display: none;
+    }
+
+    .visitoverview .status, .visitoverview .tasks, .visitoverview .warning {
+        width: 50px;
+    }
+
+    .visitoverview .arrival{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .visitoverview .crn {
+        display: none;
+    }
+
+    .portbase-logo span {
+        font-size: 15px;
+    }
+}
+
+/**
+* Tasks
+*/
+@media screen and (max-width: 1023px) {
+    .left-menu {
+        width: 100%;
+    }
+
+    .content-detail-form {
+        width: 100%;
+    }
+}
+
+/**
+* PA scherm
+*/
+@media screen and (max-width: 1240px) {
+    .routeplanner .departure, .changeorder .departure {
+        width: 25%;
+    }
+
+    .routeplanner .status, .changeorder .status {
+        display: none;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .data-list .col-2 {
+        width: 100%;
+    }
+
+    .col-2 .options .list-choices {
+        width: auto;
+        margin-left: -50%;
+    }
+
+    .col-2 .list-choices li {
+        width: 400px;
+    }
+
+    /*PA Locations and shuffle block*/
+    .routeplanner .location-icon, .changeorder .location-icon {
+        width: 5%;
+        vertical-align: top;
+    }
+
+    .routeplanner .location, .changeorder .location {
+        width: 42%;
+        vertical-align: top;
+    }
+
+    .routeplanner .arrival, .changeorder .arrival {
+        display: none;
+    }
+
+    .routeplanner .departure, .changeorder .departure {
+        width: 25%;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .routeplanner .status, .changeorder .status {
+        display: none;
+    }
+
+    .routeplanner .actions, .changeorder .actions {
+        width: 25%;
+        vertical-align: top;
+    }
+
+    .routeplannershuffle {
+        width: 100%;
+        margin: 30px 0 10px 0;
+    }
+
+    .routeplanner .actions .btn {
+        padding: 7px 5px;
+    }
+
+    .voyagevisit .port, .voyagevisit-header .port {
+        width: 35%;
+    }
+
+    .voyagevisit .no-data, .voyagevisit-header .no-data {
+        width: 48%;
+    }
+
+    .voyagevisit .customsoffice, .voyagevisit-header .customsoffice {
+        width: 25%;
+    }
+
+    .voyagevisit .arrival, .voyagevisit-header .arrival {
+        width: 22%;
+    }
+    .next-ports-nod .voyagevisit .arrival, .next-ports-nod .voyagevisit-header .arrival {
+        width: 25%;
+    }
+
+    .voyagevisit .row-actions, .voyagevisit-header .row-actions {
+        width: 12%;
+    }
+
+    .organisation .autocomplete input {
+        width: 79%;
+    }
+
+    .organisations .city, .organisation .address, .organisations .country {
+        display: none;
+    }
+
+    .organisation .fulladdress {
+        width: 57%;
+        display: inline-block;
+    }
+
+    .btn-copy .fa-angle-double-down {
+        display: inline-block;
+    }
+
+    .btn-copy .fa-angle-double-right {
+        display: none;
+    }
+
+    .previous-ports input[type="button"], .next-ports input[type="button"] {
+        padding: 7px 9px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .voyagevisit .port, .voyagevisit-header .port, .next-ports-nod .voyagevisit .port, .voyagevisit-header .port  {
+        width: 31%;
+    }
+    .voyagevisit .arrival, .voyagevisit-header .arrival {
+        width: 26%;
+    }
+
+    .voyagevisit .autocomplete input {
+        width: 95%;
+    }
+}
+
+/*Security scherm*/
+@media screen and (max-width: 1255px) {
+    .prev-port-facilities .header .port {
+        width: 240px;
+        padding-right: 0;
+    }
+
+    .prev-port-facilities .facilityname {
+        padding-left: 20px;
+        width: 220px;
+    }
+
+    .prev-port-facilities .securitymeasures {
+        width: 86%;
+        padding-left: 20px;
+    }
+}

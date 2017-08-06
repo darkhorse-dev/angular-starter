@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";;;;AAAA,iBAAc,oBAAoB,CAAC,EAAA;AACnC,iBAAc,+BAA+B,CAAC,EAAA","sourcesContent":["export * from './header.component';\r\nexport * from './usermenu/usermenu.component';\r\n"]}

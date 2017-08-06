@@ -1,0 +1,30 @@
+import { Http } from "@angular/http";
+import "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
+import { ClientConfig } from "../model/client-config";
+import { User } from "../model/user";
+import { ConfigService } from "./config.service";
+import { AuthenticatedHttp } from "./authenticated.http";
+export declare class AuthenticationService {
+    private http;
+    private authenticatedHttp;
+    private configService;
+    private token;
+    private userSource;
+    user: Observable<User>;
+    currentUser: User;
+    private configSource;
+    clientConfig: Observable<ClientConfig>;
+    config: ClientConfig;
+    private status;
+    constructor(http: Http, authenticatedHttp: AuthenticatedHttp, configService: ConfigService);
+    logout(): void;
+    isAuthenticated(): boolean;
+    private updateUser(user);
+    getUserProfile(): Observable<User>;
+    private extractData(res);
+    private getUserProfileAndClientConfig();
+    private getClientConfig();
+    startup(): any;
+    private errorHandling(errorResponse);
+}

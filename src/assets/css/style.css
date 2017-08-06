@@ -1,0 +1,2184 @@
+/* ==========================================================================
+   General Classes for reuse
+   ========================================================================== */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+h2 {
+    margin: 20px 1% 10px;
+}
+
+ul li h2 {
+    margin: 20px 0 10px;
+}
+
+body {
+    background-color: #EEE;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #333;
+    padding-bottom: 40px;
+}
+
+.maincontent {
+    background: #CCC;
+    padding-bottom: 40px;
+    min-width: 1255px;
+    margin-top: -16px;
+    z-index: 8888;
+    padding-top: 16px;
+}
+
+a {
+    color: #004462;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6c193f;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal;
+}
+
+.wrapped {
+    width: 90%;
+    min-width: 1255px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    margin: 0;
+}
+
+thead th {
+    text-align: left;
+    padding: 10px 5px;
+    background-color: #004462;
+    color: #FFF;
+    font-weight: normal;
+    font-size: 14px;
+    outline: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.page-block h1 {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: normal;
+    margin: 5px 0 15px;
+    padding: 0 0 10px;
+    vertical-align: bottom;
+    position: relative;
+}
+
+.sorting-asc, .sorting-desc {
+    background-color: #004462;
+    padding-left: 20px;
+}
+
+.sorting {
+    padding-left: 20px;
+    background: #004462 url('../images/bg-th-sort.png') no-repeat center left;
+}
+
+.sorting-asc {
+    background: #004462 url('../images/bg-th-asc.png') no-repeat center left;
+}
+
+.sorting-desc {
+    background: #004462 url('../images/bg-th-desc.png') no-repeat center left;
+}
+
+.sorting:hover, .sorting-asc:hover, .sorting-desc:hover {
+    background-color: #000;
+}
+
+tbody tr td {
+    padding: 0;
+    background-color: #FFF;
+    border-bottom: solid 2px #CCC;
+    vertical-align: middle;
+}
+
+tbody tr:hover td {
+    background-color: #EEE;
+    border-bottom: solid 2px #999;
+}
+
+.row-click tr:hover td {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+tbody tr td, tbody tr span {
+    float: none;
+    width: auto;
+    padding: 8px 5px;
+    vertical-align: bottom;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+tbody tr span {
+    display: block;
+}
+
+div.inline, span.inline {
+    display: inline;
+}
+
+hr {
+    border: none;
+    border-top: solid 1px #CCC;
+}
+
+.page-actions {
+    padding: 10px 0;
+    margin: 40px 0;
+}
+
+.btn.positive {
+    background: #fd4703;
+    color: #FFF;
+}
+
+span.btn em {
+    font-style: normal;
+}
+
+.page-actions .positive-actions .positive:hover {
+    background: #6c193f;
+}
+
+.page-actions.top {
+    margin-top: -50px;
+    padding: 3px 0;
+}
+
+.page-actions.ondemand {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    border-top: solid 2px #CCC;
+    width: 89.5%;
+    min-width: 1255px;
+    padding: 10px;
+    margin: 0 -5px;
+    background: #FFF;
+    z-index: 900;
+}
+
+.positive-actions {
+    float: right;
+    text-align: right;
+    padding: 0;
+}
+
+.negative-actions {
+    float: left;
+    text-align: left;
+    padding: 0;
+}
+
+.btn.negative {
+    background-color: #666;
+    color: #FFF;
+}
+
+.btn.negative:hover {
+    background-color: #333;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.mobile-menu-trigger {
+    display: none;
+}
+
+.legend {
+    text-align: right;
+    font-style: italic;
+    color: #999;
+    margin: 10px 0 5px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.mainheader,
+.mainheader .wrapped {
+    background: #004462;
+}
+
+.headernav {
+    height: 50px;
+}
+
+.portbase-logo {
+    float: left;
+    color: #FFF;
+    margin: 8px 0;
+}
+
+.portbase-logo span {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 34px;
+    vertical-align: top;
+    margin-left: 10px;
+    padding-left: 15px;
+    border-left: solid 1px #FFF;
+}
+
+
+
+.notifications {
+    position: relative;
+}
+
+.notifications .counter {
+    top: 16px;
+    left: -18px;
+    color: #FFF;
+    background: #C00;
+}
+
+.counter {
+    position: absolute;
+    background: #999;
+    text-align: center;
+    font-weight: normal;
+    line-height: 15px;
+    padding: 2px 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   Main navigation
+   ========================================================================== */
+
+.main-nav ul li {
+    float: left;
+}
+
+.main-nav, .main-nav .wrapped {
+    background-color: #82cadd;
+    height: 38px;
+    position: relative;
+}
+
+.main-nav li a {
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+    color: #004462;
+    text-shadow: 0 1px 0 #bddfe8;
+    border-left: solid 1px #bddfe8;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    background: #bddfe8;
+}
+
+.main-nav a:active,
+.main-nav .selected a {
+    background: #FFF;
+    color: #004462;
+    text-shadow: none;
+}
+
+.main-nav .selected a {
+    background: #FFF;
+    color: #004462;
+}
+
+.main-nav li:first-child a {
+    border-left: none;
+}
+
+.main-nav li:last-child a {
+    border-right: none;
+}
+
+.main-nav .key-action {
+    right: 0;
+    position: absolute;
+}
+
+.main-nav .key-action a {
+    color: #FFF;
+    background: #004462;
+    font-weight: normal;
+    text-shadow: none;
+    border: none;
+    padding: 8px 20px;
+    margin-top: 8px;
+}
+
+.main-nav .key-action a:hover {
+    background: #6c193f;
+}
+
+/* ==========================================================================
+   Feedback bar
+   ========================================================================== */
+.informblock {
+    margin-top: 10px;
+}
+
+.inform-message {
+    min-width: 1255px;
+    max-width: none;
+    margin: 0 auto;
+    display: block;
+    padding: 15px 0;
+    position: relative;
+}
+
+.inform-message-content {
+    margin-left: 5%;
+    padding-left: 40px;
+    width: 75%;
+    display: inline-block;
+}
+
+.inform-badge {
+    display: none;
+}
+
+.alert-info, .alert-success {
+    background: #CFC url('../images/icon-feedback-success.png') no-repeat 5% 5px;
+}
+
+.alert-error {
+    background: #FDD url('../images/icon-feedback-error.png') no-repeat 5% 5px;
+}
+
+.alert-warning {
+    background: #FFFFE0 url('../images/icon-feedback-warning.png') no-repeat 5% 5px;
+}
+
+.taskinfo-warning {
+    background: #FFFFE0;
+    border: #daa520 solid 2px;
+}
+
+div:first-child .inform-message .close {
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    padding: 0 5% 0 25px;
+    background: transparent url('../images/up_arrow.gif') no-repeat 10px 7px;
+}
+
+/* ==========================================================================
+   Page content
+   ========================================================================== */
+
+.page-title {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #004462;
+    margin: 10px 0;
+    position: relative;
+}
+
+.page-title .title {
+    width: 60%;
+    display: inline-block;
+}
+
+.page-title .title span {
+    display: inline-block;
+}
+
+.page-title .vessel,
+.page-title .eta,
+.page-title .status {
+    font-weight: normal;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.content-detail-form h1 span {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 40%;
+}
+
+.page-block {
+    background-color: #FFF;
+    padding: 10px 15px 0;
+    /*position: relative;*/
+    border-bottom: solid 2px #999;
+}
+
+.dead-end .page-block {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dead-end label {
+    width: 10%;
+    display: inline-block;
+}
+
+legend, h2 {
+    display: block;
+    clear: both;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #666;
+    padding: 5px 0;
+    margin: 20px 0 10px;
+    border-bottom: solid 2px #666;
+}
+
+/* ==========================================================================
+   Page tabs
+   ========================================================================== */
+
+.page-tabs,
+.page-subtabs {
+    position: relative;
+    clear: both;
+    overflow: hidden;
+}
+
+.page-tabs span,
+.page-subtabs span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+
+.page-tabs li,
+.page-subtabs li {
+    float: left;
+    text-align: center;
+}
+
+.page-tabs .selected a,
+.page-tabs .disabled a {
+    text-decoration: none;
+}
+
+.page-tabs .disabled span,
+.page-subtabs .disabled span {
+    color: #999;
+    cursor: default;
+    background: #EEE;
+}
+
+.page-tabs .disabled img,
+.page-subtabs .disabled img {
+    display: none;
+}
+
+.page-tabs {
+    margin: 10px 0 0;
+}
+
+.page-tabs li span {
+    display: block;
+    padding: 15px 30px 15px 15px;
+    margin: 0 2px;
+    background: #F1F1F1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.page-tabs .selected span {
+    display: block;
+    color: #333;
+    background-color: #FFF;
+}
+
+.page-subtabs {
+    margin: 0 0 5px;
+    border-bottom: solid 4px #DDD;
+}
+
+.page-subtabs li span {
+    display: block;
+    background-color: #bddfe8;
+    padding: 10px 5px;
+    margin: 0 2px;
+    -webkit-transition: All 0s ease;
+    -moz-transition: All 0s ease;
+    -o-transition: All 0s ease;
+    transition: All 0s ease;
+}
+
+.div-tabs-x2 li {
+    width: 50%;
+}
+
+.div-tabs-x3 li {
+    width: 33.3%;
+}
+
+.div-tabs-x4 li {
+    width: 25%;
+}
+
+.div-tabs-x5 li {
+    width: 20%;
+}
+
+.div-tabs-x6 li {
+    width: 16.6%;
+}
+
+.div-tabs-x7 li {
+    width: 14.2%;
+}
+
+.div-tabs-x8 li {
+    width: 12.5%;
+}
+
+.div-tabs-x9 li {
+    width: 11.1%;
+}
+
+.div-tabs-x10 li {
+    width: 10%;
+}
+
+.page-subtabs .selected span {
+    display: block;
+    background-color: #DDD;
+    padding: 12px 5px;
+    color: #333;
+}
+
+.page-subtabs li:last-child a {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Page form
+   ========================================================================== */
+
+input[type="text"], input[type="password"], textarea, select, .autocomplete input {
+    border: solid 2px #999;
+}
+
+input[type="text"], input[type="password"] {
+    width: 69.5%;
+}
+
+.autocomplete input {
+    width: 65%;
+}
+
+select {
+    width: 70.8%;
+}
+
+textarea {
+    width: 69.7%;
+}
+.required:after{
+    padding-left: 2px;
+    content: "*";
+}
+
+.label.required:after {
+    padding-left: 2px;
+    content: "* :";
+}
+
+.task-required-future:after {
+    content: "*";
+}
+
+.task-required:after {
+    content: "**";
+}
+
+.btn:focus, input:focus, .page-actions a:focus, textarea:focus, select:focus {
+    outline: solid 2px #004462;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+a.btn:focus {
+    text-decoration: none;
+}
+
+button, input, textarea, select {
+    padding: 4px 0.5%;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    outline: 0;
+}
+
+input[type="submit"], input[type="button"], button, .btn {
+    background-color: #004462;
+    color: #FFF;
+    text-align: center;
+    border: none;
+    padding: 7px 20px;
+    margin: 1px;
+    line-height: 16px;
+    font-size: 13px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
+    background-color: #6c193f;
+    color: #FFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="button"].btn-delete:hover {
+    background-color: #C00;
+}
+
+input[type="submit"]:active, input[type="button"]:active, button:active, .btn:active {
+    background-color: #000;
+    color: #FFF;
+}
+
+.options li input[type="checkbox"],
+.options li input[type="radio"] {
+    margin: 0 10px 0 5px;
+    height: 15px;
+    width: 15px;
+    vertical-align: baseline;
+}
+
+input[type="submit"][disabled]:active, input[type="button"][disabled]:active, button[disabled]:active, .btn.disabled:active,
+.page-actions .positive-actions input[type="submit"][disabled]:hover, .page-actions .positive-actions input[type="button"][disabled]:hover,
+input[type="button"][disabled].btn-delete:hover,
+.page-actions .positive-actions button[disabled]:hover, .page-actions .positive-actions .btn.disabled:hover,
+input[type="submit"][disabled], input[type="button"][disabled], button[disabled], .btn.disabled {
+    background-color: #CCC;
+    color: #666;
+    cursor: default;
+}
+
+input[type="radio"] {
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background: #fd4703;
+}
+
+.data-list li {
+    display: inline-block;
+    width: 98%;
+    margin: 0 0 0 1%;
+    padding: 2px 0;
+    vertical-align: top;
+    clear: both;
+}
+
+.data-list label {
+    float: left;
+    width: 22.3%;
+    font-weight: normal;
+    padding: 4px 0;
+}
+
+.data-list li ul {
+    float: left;
+    width: 100%;
+}
+
+.data-list li li {
+    margin: 1px 0;
+    width: 100%;
+}
+
+.data-list tr input[type="text"], .data-list tr select, .data-list tr textarea {
+    margin: 1px 2px;
+}
+
+.data-list li .options {
+    position: relative;
+    width: 75%;
+}
+
+.options li {
+    background: #EEE;
+    margin: 2px 0 2px;
+    padding: 0;
+    width: 94.5%;
+}
+
+.options li:first-child {
+    border: none;
+}
+
+.options li label {
+    float: right;
+    width: 95%;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.data-list li p {
+    width: 77%;
+    float: left;
+    margin: 0 0 10px;
+}
+
+.options li input,
+.options li label {
+    width: 95%;
+    color: #333;
+}
+
+.options li input {
+    margin: 0 5px;
+}
+
+.static span, .static p, .static .tooltip-container {
+    padding: 4px 0;
+}
+
+.static .options li {
+    background: none;
+    list-style: disc outside none;
+    margin: 0 0 2px 15px;
+    display: list-item;
+    width: auto;
+}
+
+.static .options span {
+    float: none;
+    width: auto;
+}
+
+.background-grey td {
+    background-color: #EEEEEE;
+}
+
+/* MULTISELECT */
+
+.list-choices {
+    z-index: 20001;
+    background: #EEE;
+    position: absolute;
+    top: 30px;
+    border: solid 2px #CCC;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.extra-info .list-choices,
+.extra-info .list-choices li {
+    background: #FFF;
+}
+
+.data-list .col-2 p {
+    width: 51.5%;
+    margin-right: 0;
+    word-wrap: break-word;
+}
+
+.data-list .list-choices p {
+    display: block;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.list-choices ul {
+    width: 100%;
+    text-align: left;
+}
+
+.list-choices li {
+    width: 33%;
+    border-top: none;
+    text-align: left;
+}
+
+.list-choices li label, .list-choices li input {
+    width: 85%;
+    float: left;
+    vertical-align: middle;
+}
+
+.data-list .options .display-choices {
+    background: none;
+    padding: 4px 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+}
+
+.options .display-choices em {
+    padding: 2px 10px;
+    margin: 2px;
+    background: #EEE;
+    border-radius: 5px;
+    border: solid 1px #CCC;
+    display: block;
+}
+
+/* 2 COLUMNS LAYOUT */
+.data-list .col-2 {
+    width: 47.6%;
+    margin: 3px 1%;
+    clear: none;
+    display: inline-block;
+}
+
+.data-list .col-2 span,
+.data-list .col-2 .options {
+    float: left;
+    width: 48%;
+    padding: 4px 0;
+}
+
+.data-list .col-2 textarea {
+    width: 40.5%;
+}
+
+.col-2 input[type="text"] {
+    width: 40%;
+}
+
+.col-2.autocomplete input[type="text"] {
+    width: 35.5%;
+}
+
+.col-2 select {
+    width: 41.7%;
+}
+
+.data-list label select {
+    width: 95%;
+}
+
+.col-2 .options li {
+    width: 87%;
+}
+
+.col-2 label {
+    width: 34%;
+    margin-right: 5px;
+}
+
+.options li input,
+.options li label {
+    width: 82%;
+    float: left;
+}
+
+.col-2 .options .list-choices {
+    width: 300%;
+    margin-left: -150%;
+}
+
+.col-2 .list-choices li {
+    width: 33%;
+}
+
+.right .options .list-choices {
+    position: absolute;
+    right: 0;
+}
+
+.add-line {
+    text-align: center;
+    padding: 4px 0 20px;
+    margin: 0;
+}
+
+/* content-detail-form */
+
+.content-detail-form {
+    width: 79.5%;
+    padding-left: 1%;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 2;
+    padding-bottom: 40px;
+}
+
+.left-menu {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    margin-left: -15px;
+    margin-top: -10px;
+    border-right: solid 2px #999;
+    position: relative;
+    z-index: 3;
+}
+
+.toggle-left-menu {
+    vertical-align: top;
+    float: left;
+    padding: 0 5px 0 0;
+    letter-spacing: 0;
+    text-decoration: none;
+    width: 25px;
+}
+
+.toggle-left-menu span {
+    text-indent: -20000px;
+    text-transform: capitalize;
+    overflow: hidden;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.toggle-left-menu .close {
+    width: 100%;
+    display: none;
+    background: transparent url('../img/leftmenu-open.png') no-repeat left 3px;
+}
+
+.toggle-left-menu .open {
+    width: 100%;
+    background: transparent url('../img/leftmenu-close.png') no-repeat left 3px;
+}
+
+.minified .toggle-left-menu .open {
+    display: none;
+}
+
+.minified .toggle-left-menu .close {
+    display: inline;
+}
+
+.minified .left-menu {
+    width: 10px;
+    border: none;
+}
+
+.minified .left-menu li {
+    display: none;
+}
+
+.minified .content-detail-form {
+    width: 98%;
+    margin-left: 0;
+}
+
+.left-menu .page-tabs {
+    overflow: visible;
+    margin: 0;
+}
+
+.left-menu ul li {
+    width: 100%;
+    text-align: left;
+}
+
+.left-menu .selected span {
+    margin-left: -5px;
+    margin-right: -2px;
+    background: #FFF;
+    border-bottom: solid 2px #999;
+    border-right: solid 2px #FFF;
+}
+
+.left-menu h3 {
+    font-size: 14px;
+    font-weight: bold;
+    background: #999;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 12px 10px;
+    margin: 0;
+}
+
+.left-menu h3 img {
+    float: right;
+    margin-top: -6px;
+    margin-right: 10px;
+}
+
+.left-menu h4 {
+    color: #999;
+    background: #DDD;
+    padding: 5px;
+    margin: 0;
+}
+
+.left-menu a span {
+    padding: 10px 30px 11px 10px;
+    border-bottom: solid 1px #CCC;
+    margin: 0;
+}
+
+.left-menu .sendingstatus img {
+    right: 10px;
+}
+
+.task-update {
+    padding: 10px;
+}
+
+.task-update.ACCEPTED, .task-update.CLOSED {
+    border: solid 2px #49A729;
+    background-color: #CCFFCC;
+}
+
+.task-update.REJECTED {
+    background-color: #FDD;
+    border: solid 2px #F99;
+}
+
+.task-update ul {
+    padding-left: 18px;
+    margin: 0;
+    list-style: disc inside none;
+}
+
+.task-update.info {
+    border: solid 2px #ED9;
+    background-color: #FFFFE0;
+}
+
+/* TOGGLE EXTRA-ROW */
+
+.extra-info {
+    background: #EEE;
+    padding: 10px;
+}
+
+.extra-info .data-list {
+    float: none;
+}
+
+.contains-errors .extra-info {
+    display: block;
+}
+
+.data-block {
+    background: #FFF;
+    border: solid 2px #CCC;
+    padding: .5%;
+    margin: 0 0 10px;
+}
+
+.data-list .data-block {
+    width: 98.7%;
+}
+
+.col-2 .data-block {
+    padding: 1%;
+}
+
+.data-block li.col-2 label {
+    width: 46%;
+}
+
+.data-block label {
+    width: 23%;
+}
+
+.data-block li.col-2 select {
+    width: 43.4%;
+}
+
+.data-block .block-action {
+    width: 94.7%;
+    text-align: right;
+}
+
+.col-2 .data-block .block-action {
+    width: 88.5%;
+}
+
+/* ERROR FEEDBACKS */
+
+.hint,
+.tooltip {
+    display: none;
+}
+
+.hint {
+    right: 10px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    z-index: 889;
+}
+
+.hint img {
+    margin-top: 4px;
+    vertical-align: top;
+}
+
+label .hint img {
+    margin: 0;
+}
+
+label .tooltip {
+    left: 0;
+}
+
+.tooltip {
+    right: 0;
+    z-index: 9999;
+    position: absolute;
+    padding: 7px 5px;
+    background: #EEE;
+    border: solid 2px #CCC;
+    color: #333;
+    text-align: left;
+    width: 210px;
+}
+
+.tooltip-scale {
+    margin-right: 25px;
+}
+
+.timescale {
+    vertical-align: middle;
+}
+
+.ui-datepicker-trigger {
+    width: 20px;
+    height: 20px;
+    padding: 4px 4px 5px;
+    vertical-align: top;
+}
+
+.timescale img:hover {
+    cursor: pointer;
+}
+
+.autocomplete input:not([disabled]), .autocomplete-no-padding input:not([disabled]) {
+    background: #FFFFFF url('../images/hint-autocomplete.png') no-repeat center right;
+}
+
+.autocomplete input {
+    padding: 4px 5% 4px 0.5%;
+}
+
+/* FORM ERROR style */
+
+.tooltip-container {
+    display: inline;
+    position: relative;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    /*Chrome CSS bugfixing*/
+    .autocomplete .tooltip-container {
+        display: block;
+    }
+}
+
+.error input, .error select {
+    border: solid 2px #C00;
+}
+
+.error input:focus, .data-list .error select:focus {
+    color: inherit;
+}
+
+.error label {
+    color: #C00;
+}
+
+.error .tooltip {
+    display: block;
+    opacity: 1;
+    border-color: #F99;
+    background-color: #FDD;
+}
+
+
+.information .tooltip {
+    display: block;
+    opacity: 1;
+    border-color: #1b809e;
+    background-color: #d9edf7;
+}
+
+.info .hint,
+.information .hint,
+.error .hint {
+    display: inline;
+}
+
+.info .hint img,
+.information .hint img,
+.error .hint img {
+    width: 20px;
+    height: 20px;
+}
+
+/* FORM INFO style */
+
+.data-list .info {
+    position: relative;
+}
+
+.data-list .info input {
+    border: solid 2px #F29400;
+}
+
+.data-list .info input:focus {
+    color: inherit;
+}
+
+.data-list .info label {
+    color: #F29400;
+}
+
+.data-list .info .tooltip {
+    display: none;
+    border-color: #ED9;
+    background-color: #FFFFE0;
+}
+
+.data-list .info .hint {
+    display: inline;
+}
+
+.info .hint img {
+    width: 20px;
+    height: 20px;
+}
+
+/* DATEPICKER style */
+
+.ui-datepicker {
+    display: none;
+    background: #EEE;
+    border: solid 2px #CCC;
+    text-align: center;
+    padding: 0;
+}
+
+.ui-datepicker-calendar {
+    width: 250px;
+    margin: 0;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+
+    padding: 8px 15px;
+    position: absolute;
+}
+
+.ui-datepicker-prev {
+    left: 0;
+}
+
+.ui-datepicker-next {
+    right: 0;
+}
+
+.ui-datepicker-month {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ui-datepicker-title {
+    line-height: 35px;
+}
+
+.ui-datepicker-calendar th {
+    text-align: center;
+}
+
+.ui-datepicker-calendar tr:hover td {
+    background-color: #FFF;
+    border: solid 1px #CCC;
+}
+
+.ui-datepicker-calendar td {
+    background: #FFF;
+    border: solid 1px #CCC;
+    padding: 0;
+}
+
+.ui-state-default {
+    background: #FFF;
+    display: block;
+    padding: 5px;
+}
+
+.ui-state-default:hover,
+.ui-state-default.ui-state-highlight {
+    background: #666;
+    color: #FFF;
+}
+
+input[type="text"].istime {
+    width: 40px;
+    float: none;
+}
+
+input[type="text"].isdate {
+    width: 80px;
+    float: none;
+}
+
+input[type="text"].amount-99 {
+    width: 20px;
+}
+
+input[type="text"].amount-999 {
+    width: 35px;
+}
+
+input[type="text"].amount-9999 {
+    width: 35px;
+}
+
+/* ==========================================================================
+   Main footer
+   ========================================================================== */
+
+.mainfooter {
+    display: block;
+    padding: 30px 0;
+    text-align: center;
+    overflow: visible;
+}
+
+.mainfooter p {
+    padding: 20px 0;
+}
+
+.backtotop {
+    background: transparent url('../img/backtotop.png') no-repeat center 10px;
+    height: 30px;
+    width: 30px;
+    padding: 40px 0 0;
+    margin: 20px auto 0;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -2000em;
+    text-transform: capitalize;
+    border-top: solid 4px #EEE;
+}
+
+.backtotop:hover {
+    background-position: center 5px;
+    border-top: solid 4px #fd4703;
+}
+
+/* ==========================================================================
+   Datatables
+   ========================================================================== */
+
+.datatables-wrapper {
+    position: relative;
+}
+
+.datatables-wrapper .top {
+    padding-top: 30px;
+}
+
+.datatables-info {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.datatables-info span {
+    font-size: 16px;
+}
+
+.datatables-filter {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    float: right;
+    text-align: right;
+    width: 300px;
+}
+
+.datatables-filter input {
+    margin-top: 10px;
+    padding: 4px 20px 4px 4px;
+    background: #FFF url('../images/icon-refine.png') no-repeat center right;
+    width: 150px;
+}
+
+.datatable {
+    width: 100%;
+    overflow: visible;
+    z-index: 1000;
+}
+
+.datatable .must-see {
+    width: 120px;
+}
+
+.datatable th:hover {
+    cursor: pointer;
+}
+
+.datatables-empty {
+    background-color: #FFFFFF;
+    color: #CCC;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.visitoverview .status {
+    width: 60px;
+}
+
+.visitoverview .arrival, .visitoverview .departure {
+    width: 110px;
+}
+
+.visitoverview .tasks {
+    width: 100px;
+}
+
+.visitoverview .warning {
+    width: 80px;
+}
+/* ==========================================================================
+   Dialog style
+   ========================================================================== */
+
+.dialog-caption {
+    background-color: #004462;
+}
+
+.dialog-captiontext {
+    background-color: #004462;
+    color: #FFF;
+    margin: 0;
+    padding: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 75%;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.dialog-content {
+    padding: 10px;
+}
+
+.dialog-content-container {
+    overflow: auto;
+    height: auto;
+}
+
+/* ==========================================================================
+   SEARCH FILTER
+   ========================================================================== */
+.search-filter {
+    height: 28px;
+    background: #FFF;
+    padding: 10px;
+    margin: 10px 0 0;
+    border-bottom: solid 2px #EEE;
+}
+
+.search-filter li {
+    float: left;
+    width: 35%;
+    padding: 0;
+    clear: none;
+}
+
+.search-filter .search-filter-action {
+    width: auto;
+    float: right;
+    text-align: right;
+}
+
+/* ==========================================================================
+   ADVANCED SEARCH FILTER
+   ========================================================================== */
+
+.advanced-search-filter {
+    padding: 10px;
+    background: #EEE;
+}
+
+.advanced-search-filter .page-actions {
+    margin: 20px 0;
+}
+
+.advanced-search-filter .options li {
+    background: #FFF;
+}
+
+.search-filter .filters-list {
+    width: 70%;
+}
+
+.filters-list select {
+    width: 70%;
+    font-size: 16px;
+    padding: 2px;
+}
+
+.dialog-descri {
+    margin: 10px 0 20px;
+}
+
+.dialog-label {
+    padding: 7px 0;
+    display: inline-block;
+}
+
+.save-filter-name {
+    float: right;
+    width: 80%;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   Multiline input
+   ========================================================================== */
+
+.success td, .cued td {
+    vertical-align: top;
+}
+
+.success td:last-child {
+    color: #48A829;
+}
+
+.cued td:last-child {
+    color: #F3971B;
+}
+
+.hint.title img,
+.success img, .cued img {
+    float: left;
+    margin: 5px 0;
+    height: auto;
+}
+
+.hint.title {
+    text-align: left;
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   LOADING styling
+   ========================================================================== */
+
+.loading {
+    text-align: center;
+}
+
+/* ==========================================================================
+   Status styling
+   ========================================================================== */
+
+.status-icon {
+    text-align: center;
+    padding: 6px;
+}
+
+.status-icon span {
+    display: none;
+}
+
+.status-info.updated {
+    text-align: center;
+}
+
+.sendingstatus img {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.sendingstatus {
+    background: #EEE;
+    text-decoration: none;
+}
+
+.sendingstatus span {
+    text-align: center;
+    font-weight: bold;
+    line-height: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 15px;
+    width: 20px;
+    color: #FFF;
+    margin: 0 auto;
+    padding: 2px;
+    background-color: #666;
+}
+
+.warningstatus span {
+    text-align: center;
+    padding: 0;
+}
+
+.warningstatus span img {
+    height: 18px;
+}
+/* ==========================================================================
+   MULTILINE DETAILS
+   ========================================================================== */
+.multiline-wrapper-details {
+    width: 100%;
+}
+
+.display-extra-info, .multiline-rows {
+    width: 100%;
+}
+
+.multiline-row-details {
+    vertical-align: top;
+    width: 100%;
+    top: 0;
+}
+
+.multiline-row-details .extra-info {
+    display: block;
+}
+
+/* ==========================================================================
+   ABONNEMENT PAGE
+   ========================================================================== */
+
+.data-list .options.notifmode,
+.data-list .options.notifmode li {
+    width: 100%;
+}
+
+/* ADDED */
+.ui-datepicker-calendar .ui-datepicker-current-day .ui-state-active {
+    background-color: #004462;
+    color: white;
+}
+
+td.col-2 {
+    padding-top: 4px;
+}
+
+.modal {
+    display: block;
+}
+
+.modal-body:before,
+.modal-body:after {
+    display: table;
+    content: " ";
+}
+
+.modal-header:before,
+.modal-header:after {
+    display: table;
+    content: " ";
+}
+
+.data-list .col-1 label {
+    float: left;
+    width: 16.6%;
+    font-weight: normal;
+    padding: 4px 0;
+}
+
+.data-list .col-1 .documents {
+    width: 82%;
+}
+
+.extra-info {
+    display: block;
+}
+
+.backtotop {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding-bottom: 0;
+}
+
+.data-list label {
+    font-weight: normal;
+    padding: 4px 0;
+}
+
+.documents span:after {
+    content: ",";
+    padding-right: 4px;
+}
+
+.documents span:last-child:after {
+    content: "";
+}
+
+.spinner {
+    background: #ccc url("../images/loading.gif") no-repeat center center;
+    cursor: not-allowed;
+    /*display: none;*/
+    height: 100%;
+    left: 0;
+    opacity: .6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9000;
+}
+
+input[type="text"].input90 {
+    width: 90%;
+}
+
+.label:after {
+    padding-left: 5px;
+    content: ":";
+}
+
+.localvisit .header {
+    text-align: center;
+}
+
+.localvisit .backtorows {
+    float: left;
+}
+
+/* routeplanner / SHUFFLE layout*/
+.routeplanner .location-icon, .changeorder .location-icon {
+    display: inline-block;
+    width: 5%;
+}
+
+.routeplanner .location-icon img, .changeorder .location-icon img {
+    vertical-align: middle;
+}
+
+.routeplanner .location, .changeorder .location {
+    display: inline-block;
+    width: 30%;
+}
+
+.routeplanner .arrival, .changeorder .arrival {
+    display: inline-block;
+    width: 15%;
+}
+
+.routeplanner .departure, .changeorder .departure {
+    display: inline-block;
+    width: 20%;
+}
+
+.routeplanner .status, .changeorder .status {
+    display: inline-block;
+    width: 5%;
+}
+
+.routeplanner .actions, .changeorder .actions {
+    display: inline-block;
+    width: 22%;
+    text-align: right;
+}
+
+.routeplannershuffle {
+    width: 100%;
+    margin: 30px 0 10px 0;
+}
+
+.routeplanner .routeheader {
+    background-color: #666;
+    color: #FFF;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.routeplanner .movement {
+    padding: 2px 0 2px 5px;
+    border-bottom: solid 2px #CCC;
+    margin: 0;
+    line-height: 30px;
+}
+
+.routeplanner .movement:hover {
+    background-color: #EEEEEE;
+    cursor: pointer;
+}
+
+.routeplanner .movement li:first-child {
+    background: url('../images/icon-location-path.png') repeat-y 0 9px;
+}
+
+.movement input[typeahead-editable] {
+    width: 86%;
+}
+
+.movement select {
+    width: 93%;
+}
+
+input[type="button"], button, .btn {
+    background-color: #004462;
+    color: #FFF;
+    text-align: center;
+    border: none;
+    padding: 7px 20px;
+    margin: 1px;
+    line-height: 16px;
+    font-size: 13px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.ui-dialog ol {
+    list-style-type: none;
+}
+
+.ui-dialog ol li {
+    padding-bottom: 20px;
+}
+
+/*styling for ui-tree (drag & drop)*/
+.angular-ui-tree-placeholder {
+    background-color: lightgrey;
+}
+
+.angular-ui-tree-empty {
+    display: none;
+}
+
+/* previous and next ports */
+.voyagevisit-header li, .voyagevisit li, .organisations .header, .organisations li, .prev-port-facilities li, .ship-to-ship-activities li {
+    width: 100%;
+    display: inline-block;
+}
+
+.previous-ports .voyagevisit-header, .next-ports .voyagevisit-header, .organisations .header, .prev-port-facilities .header, .ship-to-ship-activities .header {
+    background-color: #666;
+    color: #FFF;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 2px;
+    padding: 10px 0;
+}
+
+.voyagevisit-header label, .organisations .header label, .prev-port-facilities .header label {
+    padding-left: 5px;
+}
+
+.voyagevisit .drag-drop-actions, .voyagevisit-header .drag-drop-actions {
+    width: 3%;
+}
+
+.voyagevisit .port, .voyagevisit-header .port {
+    width: 27%;
+}
+
+.next-ports-nod .voyagevisit .port, .next-ports-nod .voyagevisit-header .port {
+    width: 32%;
+}
+
+.next-ports-nod {
+    padding-bottom: 15px;
+}
+
+.nod-save-buttons {
+    position: absolute;
+    padding-left: 28%;
+}
+
+.nod-save-buttons-sw-active {
+    position: absolute;
+    padding-left: 24%;
+}
+
+.voyagevisit li {
+    min-height: 22px;
+}
+
+.voyagevisit .port input {
+    width: 85%;
+    padding: 4px 4px 4px 0;
+}
+
+.voyagevisit .customsoffice input {
+    width: 95%;
+    padding: 4px 4px 4px 0;
+}
+
+.voyagevisit .arrival, .voyagevisit-header .arrival,
+.voyagevisit .departure, .voyagevisit-header .departure {
+    width: 25%;
+}
+
+.voyagevisit .customsoffice, .voyagevisit-header .customsoffice {
+    width: 30%;
+}
+
+/*Should be possible to use 52%, no idea why this is not possible looks like somewhere padding or margin is added*/
+.voyagevisit .no-data, .voyagevisit-header .no-data {
+    width: 55%;
+}
+
+.voyagevisit .row-actions, .voyagevisit-header .row-actions {
+    width: 13%;
+    text-align: right;
+}
+
+.previous-ports .voyagevisit, .next-ports .voyagevisit {
+    background-color: #FFF;
+    border-bottom: solid 2px #CCC;
+}
+
+.previous-ports .voyagevisit:hover, .next-ports .voyagevisit:hover {
+    background-color: #EEE;
+    border-bottom: solid 2px #999;
+    cursor: pointer;
+}
+
+.organisations .name {
+    width: 40%;
+}
+
+.organisations .city {
+    width: 19%;
+}
+
+.organisations .address {
+    width: 19%;
+}
+
+.organisations .country {
+    width: 19%;
+}
+
+.organisations .fulladdress {
+    display: none;
+}
+
+.organisation {
+    border-bottom: solid #999 2px;
+    padding: 4px 0;
+}
+
+.financial-declarant .owncreditnumber {
+    margin: 12px 0;
+}
+
+.btn-copy {
+    float: right;
+}
+
+.btn-copy .fa-angle-double-down {
+    display: none;
+}
+
+.btn-copy .fa-angle-double-right {
+    display: inline-block;
+}
+
+.list-odd {
+    background-color: #EEEEEE;
+}
+
+.prev-port-facilities li {
+    vertical-align: top;
+}
+
+.prev-port-facilities .port {
+    width: 50%;
+    padding-right: 30%;
+}
+
+.prev-port-facilities .portfacilities, .ship-to-ship-activities .ship-to-ship-activity {
+    border-bottom: solid 2px #CCC;
+}
+
+.prev-port-facilities .facility {
+    border-bottom: solid 1px #CCC;
+}
+
+.prev-port-facilities .facility:last-child {
+    border-bottom: 0;
+}
+
+.prev-port-facilities .header .port {
+    width: 30%;
+    padding-right: 0;
+}
+
+.prev-port-facilities .port-data .row-actions {
+    width: 18%;
+    text-align: right;
+}
+
+.prev-port-facilities .facilityname {
+    padding-left: 3%;
+    width: 27%;
+}
+
+.prev-port-facilities .facilityname input[type="text"] {
+    width: 97%;
+}
+
+.prev-port-facilities .securitylevel {
+    width: 30%;
+}
+
+.prev-port-facilities .securitylevel {
+    width: 100px;
+}
+
+.prev-port-facilities .arrival, .prev-port-facilities .departure {
+    width: 130px;
+}
+
+.prev-port-facilities .securitymeasures {
+    width: 260px;
+}
+
+.prev-port-facilities .securitymeasures textarea {
+    height: 16px;
+    width: 100%;
+}
+
+.prev-port-facilities input[type="text"] {
+    height: 16px;
+}
+
+.facility .row-actions {
+    width: 40px;
+    text-align: right;
+}
+
+.portfacilities ul {
+    line-height: 32px;
+}
+
+.portfacilities .row-actions .add-facility {
+    text-align: right;
+}
+
+.portfacilities .delete-port {
+    float: right;
+}
+
+.portfacilities input[type="button"] {
+    padding: 7px 0;
+    width: 100px;
+    outline: none;
+}
+
+/*ship to ship activities*/
+.ship-to-ship-activities .ship-to-ship-activity li {
+    min-height: 32px;
+    vertical-align: top;
+}
+
+.ship-to-ship-activities .location {
+    width: 25%;
+}
+
+.ship-to-ship-activities .activity {
+    width: 25%;
+}
+
+.ship-to-ship-activities .enddate, .ship-to-ship-activities .startdate {
+    width: 130px;
+}
+
+.ship-to-ship-activities .complient {
+    border-radius: 0;
+    width: 132px;
+}
+
+.ship-to-ship-activities .complient label {
+    width: 50px;
+    vertical-align: top;
+    padding-right: 0;
+}
+
+.ship-to-ship-activities .complient input[type="radio"] {
+    margin: 2px;
+    padding: 20px;
+}
+
+.ship-to-ship-activities .row-actions {
+    width: 130px;
+    float: right;
+}
+
+.ship-to-ship-activities .row-actions input[type="button"] {
+    padding: 7px 0;
+    width: 60px;
+    outline: none;
+}
+
+.ship-to-ship-activities .securitymeasures {
+    width: 100%;
+}
+
+.ship-to-ship-activities .securitymeasures label {
+    width: 100%;
+    float: left;
+    white-space: nowrap;
+    margin-left: 5px;
+}

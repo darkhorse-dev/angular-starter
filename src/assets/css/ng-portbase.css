@@ -1,0 +1,63 @@
+/*
+.inform {
+    background-color: #CCC;
+}
+
+.inform-message {
+    margin: 0 auto;
+    display: block;
+    padding: 11px 40px;
+    position: relative;
+}
+*/
+
+
+.inform div .inform-message .close{
+    display:none;
+}
+.inform div:first-child .close{
+    display:inline-block;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    background: transparent url('../images/up_arrow.gif') no-repeat 10px 7px;
+    color: buttontext;
+}
+
+.inform-message {
+    width: 100%;
+}
+
+.inform-message .close:hover{
+    text-decoration: underline;
+}
+.inform-message .close:active, .inform-message .close::selection{
+    background-color: transparent !important;
+}
+.inform-message .close span{
+    display:none;
+}
+.inform-message-content{
+    margin-left: 40px;
+}
+
+span.ng-scope{
+    float: none !important;
+}
+
+.alert-info {
+    background: #CFC url(../images/icon-feedback-success.png) no-repeat 40px 5px;
+}
+
+.alert-success {
+    background: #CFC url(../images/icon-feedback-success.png) no-repeat 40px 5px;
+}
+
+.alert-error {
+    background: #FDD url(../images/icon-feedback-error.png) no-repeat 40px 5px;
+}
+
+.alert-warning {
+    background: #FFFFE0 url(../images/icon-feedback-warning.png) no-repeat 40px 5px;
+}
+
